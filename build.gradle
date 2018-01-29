@@ -6,21 +6,20 @@ buildscript {
         google()
         jcenter()
         maven {
-            url uri('/Users/asw/Desktop/repo')
+            url uri('http://nexus:8081/nexus/content/repositories/releases')
         }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
-        classpath group: 'com.tj',
-                name: 'plugin',
-                version: '1.0.3'
+//        classpath 'com.maoyan.android.gradle.plugin:builder:1.0.0'
+        classpath 'com.maoyan.test:test-maoyan:5.0.8'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
-apply plugin: 'com.tj.mycustom'
+
 
 allprojects {
     repositories {
