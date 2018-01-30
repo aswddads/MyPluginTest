@@ -28,7 +28,7 @@ android {
  * 其中userName和passWord为不必学选项，视你想要上传的url是否要求有userName和passWord
  */
 maoyanBuilderConfig {
-    versionName = "4.4.4"
+    versionName = "4.54.4"
     group = "com.maoyan.test"
     name = "test-maoyan"
 }
