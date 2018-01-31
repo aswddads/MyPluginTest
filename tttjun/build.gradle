@@ -1,6 +1,22 @@
 apply plugin: 'com.android.library'
 apply plugin: 'maven'
-apply plugin: 'com.maoyan.movie'
+try{
+    apply plugin: 'com.maoyan.movie'
+
+
+/**
+ * 使用该插件，并向内部提供数据的入口
+ * 其中userName和passWord为不必学选项，视你想要上传的url是否要求有userName和passWord
+ */
+    maoyanBuilderConfig {
+        versionName = "8.54.4"
+        group = "com.maoyan.test"
+        name = "test-maoyan"
+    }
+}catch (Throwable e){
+
+}
+
 
 android {
     compileSdkVersion 26
@@ -23,15 +39,6 @@ android {
 
 }
 
-/**
- * 使用该插件，并向内部提供数据的入口
- * 其中userName和passWord为不必学选项，视你想要上传的url是否要求有userName和passWord
- */
-maoyanBuilderConfig {
-    versionName = "20.54.4"
-    group = "com.maoyan.test"
-    name = "test-maoyan"
-}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
